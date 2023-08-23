@@ -1,0 +1,58 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Button.-secondary {
+  font-size: 20;
+}
+
+.productContainer {
+  margin: 15px;
+  padding: 30px;
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: rgb(0, 21, 255);
+}
+
+.productImage {
+  width: 90%;
+}
+
+.h1 {
+  font-size: 36;
+  color: #f1f1f1;
+}
+
+.productPrice {
+  font-size: 28;
+  font-weight: bolder;
+}
+
+.ScrollView {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.top {
+  height: 90vh;
+  padding: 120px 40px;
+  background-size: contain;
+}
+
+.topText {
+  margin: 25px 0;
+}
+
+.topDescription {
+  font-size: 22;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.upper-btn {
+  border-radius: 6px;
+  color: #59d4ff;
+}

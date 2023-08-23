@@ -1,0 +1,57 @@
+<ActionBar title="List of my product"></ActionBar>
+
+<ScrollView>
+  <GridLayout>
+    <StackLayout class="wrap">
+      <StackLayout
+        [ngStyle]="{
+          'background-image': 'url(' + backgroundImg + ')'
+        }"
+        class="top"
+      >
+        <Image [src]="topImg" class="topImg"></Image>
+        <Image [src]="topText" class="topText"></Image>
+        <label
+          text="Stop thinking - shop now!"
+          textWrap="true"
+          class="topDesc"
+        ></label>
+        <Button text="SHOP NOW" class="top-button"></Button>
+      </StackLayout>
+      <StackLayout class="products-cont">
+        <Image [src]="productTitle" class="title"></Image>
+        <StackLayout
+          *ngFor="let product of productList"
+          class="productContainer"
+          [nsRouterLink]="['/productdetails', product.id]"
+          (tap)="getProductDetails(product.id)"
+        >
+          <Image
+            [src]="product.attributes.mainImg.data.attributes.url"
+            class="productImage"
+          ></Image>
+          <label [text]="product.attributes.name" class="h1"></label>
+          <label
+            [text]="product.attributes.description"
+            textWrap="true"
+          ></label>
+          <label
+            [text]="'$' + product.attributes.price"
+            class="productPrice"
+          ></label>
+        </StackLayout>
+      </StackLayout>
+
+      <StackLayout class="about-cont">
+        <Image [src]="aboutTitle" class="title"></Image>
+        <label
+          text="Shop fast and safely with us! Special price, best quality, fast delivery."
+          textWrap="true"
+          class="aboutDesc"
+        ></label>
+        <Image [src]="aboutImage"></Image>
+      </StackLayout>
+      <StackLayout> </StackLayout>
+    </StackLayout>
+  </GridLayout>
+</ScrollView>

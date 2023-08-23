@@ -16,8 +16,6 @@ interface Product {
   templateUrl: './productdetails.component.html',
 })
 export class ProductdetailsComponent implements OnInit {
-  //we check for the product id in the URL
-  //take the id and pass the id to the Strapi API
   product: Product;
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 

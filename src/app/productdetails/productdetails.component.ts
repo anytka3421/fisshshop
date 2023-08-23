@@ -23,13 +23,6 @@ export class ProductdetailsComponent implements OnInit {
 
   ngOnInit() {
     let productID = this.route.snapshot.paramMap.get('id');
-
-    this.http
-      .get<Product>(
-        'https://starfish-app-ux8rd.ondigitalocean.app/api/products' +
-          productID +
-          '?populate=*'
-      )
       .subscribe((res) => {
         console.log('product', res);
         this.product = res;
